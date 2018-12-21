@@ -1,0 +1,17 @@
+// IMPORT PACKAGE REFERENCES
+import React from 'react';
+
+// IMPORT PROJECT REFERENCES
+
+import { ZipCodeBrowser } from '../ZipCodeBrowser/ZipCodeBrowser';
+
+
+// COMPONENT
+
+const ZipCodesPage = () => (
+    <div className="p-3">
+        <ZipCodeBrowser />
+    </div>
+);
+
+export default ZipCodesPage;
