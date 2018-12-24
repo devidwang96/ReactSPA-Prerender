@@ -20,15 +20,28 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./Header";
 import Container from "./Container";
 
-const App = () => (
-    <Provider store={createAppStore()}>
-        <Router>
-            <div>
-                <Header />
-                <Container />
-            </div>
-        </Router>
-    </Provider>
-);
+
+class App extends React.Component {
+    constructor (){
+        super();
+    }
+
+    render() {
+        return (
+            <Provider store={createAppStore()}>
+                <Router>
+                    <div>
+                        <Header/>
+                        <Container/>
+                    </div>
+                </Router>
+            </Provider>
+        )
+    }
+
+    componentDidMount(){
+        console.log('Main mounted');
+    }
+}
 
 export default App;
